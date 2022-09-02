@@ -82,7 +82,6 @@ pre > code {
 .hljs {
   background: #2b2b2b;
   color: #f8f8f2;
-}
 
   /* Comment */
   .hljs-comment,
@@ -102,48 +101,49 @@ pre > code {
     color: #ffa07a;
   }
 
-/* Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-  color: #f5ab35;
-}
+  /* Orange */
+  .hljs-number,
+  .hljs-built_in,
+  .hljs-literal,
+  .hljs-type,
+  .hljs-params,
+  .hljs-meta,
+  .hljs-link {
+    color: #f5ab35;
+  }
 
-/* Yellow */
-.hljs-attribute {
-  color: #ffd700;
-}
+  /* Yellow */
+  .hljs-attribute {
+    color: #ffd700;
+  }
 
-/* Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-  color: #abe338;
-}
+  /* Green */
+  .hljs-string,
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-addition {
+    color: #abe338;
+  }
 
-/* Blue */
-.hljs-title,
-.hljs-section {
-  color: #00e0e0;
-}
+  /* Blue */
+  .hljs-title,
+  .hljs-section {
+    color: #00e0e0;
+  }
 
-/* Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-  color: #dcc6e0;
-}
+  /* Purple */
+  .hljs-keyword,
+  .hljs-selector-tag {
+    color: #dcc6e0;
+  }
 
-.hljs-emphasis {
-  font-style: italic;
-}
+  .hljs-emphasis {
+    font-style: italic;
+  }
 
-.hljs-strong {
-  font-weight: bold;
+  .hljs-strong {
+    font-weight: bold;
+  }
 }
 
 @media screen and (-ms-high-contrast: active) {
