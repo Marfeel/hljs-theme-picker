@@ -41,7 +41,7 @@
 .hljs-request,
 .hljs-status,
 pre > code {
-  color: unset !default;
+  color: unset;
 }
 
 .hljs-meta,
@@ -66,15 +66,15 @@ pre > code {
 .lisp .hljs-title,
 .clojure .hljs-title,
 .hljs-subst {
-  font-weight: initial !default;
+  font-weight: initial;
 }
 
 .hljs-deletion,
 .hljs-addition {
-  background: initial !default;
+  background: initial;
 }
 
 .hljs-comment,
 .hljs-doctag {
-  font-style: initial !default;
+  font-style: initial;
 }
