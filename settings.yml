@@ -245,6 +245,3 @@ hljs_theme:
     - vs
     - xcode
     - xt256
-hljs_dark_match:
-  default: false
-  description: "Load dark color scheme if available"
