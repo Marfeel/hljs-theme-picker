@@ -9,7 +9,6 @@
 .hljs {
   background: #2b2b2b;
   color: #f8f8f2;
-}
 
 /* Comment */
 .hljs-comment,
@@ -95,4 +94,5 @@
     .hljs-selector-tag {
         font-weight: bold;
     }
+}
 }

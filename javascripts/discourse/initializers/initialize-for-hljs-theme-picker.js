@@ -12,7 +12,7 @@ export default {
         link.setAttribute("rel", "stylesheet");
         link.setAttribute("type", "text/css");
         link.setAttribute("href", path);
-        document.head.appendChild(link);
+        document.head.prepend(link);
 
         if (
           settings.hljs_dark_match &&
