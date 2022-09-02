@@ -79,8 +79,10 @@ pre > code {
   font-style: initial;
 }
 
-background: #2b2b2b;
+.hljs {
+  background: #2b2b2b;
   color: #f8f8f2;
+}
 
   /* Comment */
   .hljs-comment,
