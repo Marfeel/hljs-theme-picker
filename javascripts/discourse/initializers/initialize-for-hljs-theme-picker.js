@@ -14,6 +14,16 @@ export default {
         link.setAttribute("href", path);
         document.head.appendChild(link);
 
+        const metaTag = document.createElement("meta");
+        metaTag.setAttribute("name", "keywords");
+        // get all og:article:tag content
+        const tags = document.querySelectorAll(
+          'meta[property="og:article:tag"]'
+        );
+        metaTag.setAttribute("content", Array.from(tags).map((tag) => tag.content).join(","));
+
+        document.head.appendChild(metaTag);
+
         if (
           settings.hljs_dark_match &&
           (theme.endsWith("-light") || theme.endsWith("github"))
