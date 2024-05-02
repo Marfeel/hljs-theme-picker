@@ -20,7 +20,12 @@ export default {
         const tags = document.querySelectorAll(
           'meta[property="og:article:tag"]'
         );
-        metaTag.setAttribute("content", Array.from(tags).map((tag) => tag.content).join(","));
+        metaTag.setAttribute(
+          "content",
+          Array.from(tags)
+            .map((tag) => tag.content)
+            .join(",")
+        );
 
         document.head.appendChild(metaTag);
 
