@@ -4,7 +4,7 @@ export default {
   name: "hljs-theme-picker",
 
   initialize() {
-    withPluginApi("0.8.7", () => {
+    withPluginApi("0.8.7", api => {
       try {
         const theme = settings.hljs_theme;
         const path = settings.theme_uploads[theme];
@@ -13,21 +13,6 @@ export default {
         link.setAttribute("type", "text/css");
         link.setAttribute("href", path);
         document.head.appendChild(link);
-
-        const metaTag = document.createElement("meta");
-        metaTag.setAttribute("name", "keywords");
-        // get all og:article:tag content
-        const tags = document.querySelectorAll(
-          'meta[property="og:article:tag"]'
-        );
-        metaTag.setAttribute(
-          "content",
-          Array.from(tags)
-            .map((tag) => tag.content)
-            .join(",")
-        );
-
-        document.head.appendChild(metaTag);
 
         if (
           settings.hljs_dark_match &&
@@ -57,6 +42,16 @@ export default {
             document.head.appendChild(linkDark);
           }
         }
+
+        api.onPageChange(() => {
+          if (Discourse.Topic.current()) {
+            const topic = Discourse.Topic.current();
+            const keywordsContent = topic.tags.join(', ');
+
+            $('meta[name=keywords]').remove(); // Remove previous keywords if exist
+            $('head').append(`<meta name="keywords" content="${keywordsContent}">`); // Add new meta tag
+          }
+        });
       } catch (error) {
         // eslint-disable-next-line no-console
         console.error(
