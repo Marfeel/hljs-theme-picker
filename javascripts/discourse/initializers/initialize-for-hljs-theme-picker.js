@@ -4,7 +4,7 @@ export default {
   name: "hljs-theme-picker",
 
   initialize() {
-    withPluginApi("1.6.0", () => {
+    withPluginApi("0.8.7", () => {
       try {
         const theme = settings.hljs_theme;
         const path = settings.theme_uploads[theme];
