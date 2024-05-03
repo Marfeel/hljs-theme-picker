@@ -80,11 +80,11 @@ body .hljs-deletion {
   color: #880000;
 }
 
-body .hljs-title,
+/* body .hljs-title,
 body .hljs-section {
   color: #880000;
   font-weight: bold;
-}
+} */
 
 body .hljs-regexp,
 body .hljs-symbol,
