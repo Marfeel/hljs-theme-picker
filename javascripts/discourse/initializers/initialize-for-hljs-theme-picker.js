@@ -4,7 +4,7 @@ export default {
   name: "hljs-theme-picker",
 
   initialize() {
-    withPluginApi("0.8.7", api => {
+    withPluginApi("1.6.0", () => {
       try {
         const theme = settings.hljs_theme;
         const path = settings.theme_uploads[theme];
@@ -42,16 +42,6 @@ export default {
             document.head.appendChild(linkDark);
           }
         }
-
-        api.onPageChange(() => {
-          if (Discourse.Topic.current()) {
-            const topic = Discourse.Topic.current();
-            const keywordsContent = topic.tags.join(', ');
-
-            $('meta[name=keywords]').remove(); // Remove previous keywords if exist
-            $('head').append(`<meta name="keywords" content="${keywordsContent}">`); // Add new meta tag
-          }
-        });
       } catch (error) {
         // eslint-disable-next-line no-console
         console.error(
