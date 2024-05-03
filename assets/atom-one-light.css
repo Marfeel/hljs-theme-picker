@@ -63,17 +63,17 @@ body .hljs-selector-class,
 body .hljs-selector-attr,
 body .hljs-selector-pseudo,
 body .hljs-number {
-  color: #986801;
+  color: #c18401;
 }
 
-body .hljs-symbol,
+/* body .hljs-symbol,
 body .hljs-bullet,
 body .hljs-link,
 body .hljs-meta,
 body .hljs-selector-id,
 body .hljs-title {
   color: #4078f2;
-}
+} */
 
 body .hljs-built_in,
 body .hljs-title.class_,
@@ -92,3 +92,6 @@ body .hljs-strong {
 body .hljs-link {
   text-decoration: underline;
 }
+
+body .hljs-variable.constant_ { color: unset; }
+body .hljs-keyword, body .hljs-subst, body .hljs-request, body .hljs-status, body .hljs-literal { font-weight: normal; }
