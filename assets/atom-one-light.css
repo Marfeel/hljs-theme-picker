@@ -47,6 +47,7 @@ body .hljs-literal {
   color: #0184bb;
 }
 
+body .hljs-tag .hljs-string,
 body .hljs-string,
 body .hljs-regexp,
 body .hljs-addition,
@@ -93,5 +94,5 @@ body .hljs-link {
   text-decoration: underline;
 }
 
-body .hljs-variable.constant_ { color: unset; }
+body .hljs-variable.constant_, body .hljs-tag, body .hljs-tag .hljs-name { color: unset; }
 body .hljs-keyword, body .hljs-subst, body .hljs-request, body .hljs-status, body .hljs-literal { font-weight: normal; }
